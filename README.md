@@ -8,11 +8,6 @@
 
 ### Database Updates
 
-To generate a new migration using powershell, you can run the following commands replacing `$root` and `$migrationName` with ones applicable to you.
+Run this to update the database to the current migration
 
-``` Powershell
-$root = "D:\Draycir.Approvals" #This should be replaced to suit your setup
-$migrationName = "MyMigration" #This should be replaced 
-cd "$root\src\Draycir.Approvals.Persistence.EntityFramework"
-dotnet ef migrations add $migrationName -s "..\Draycir.Approvals.Persistence.EntityFramework.ConsoleApp\"
-```
+`dotnet ef database update`

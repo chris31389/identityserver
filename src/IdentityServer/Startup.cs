@@ -12,6 +12,7 @@ namespace IdentityServer
 {
     public class Startup
     {
+        // https://codebrains.io/how-to-add-jwt-authentication-to-asp-net-core-api-with-identityserver-4-part-1/
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
@@ -27,6 +28,7 @@ namespace IdentityServer
                     options.UseSqlServer(Configuration.GetConnectionString("Database")))
                 .AddDefaultIdentity<IdentityUser>()
                 .AddDefaultUI(UIFramework.Bootstrap4)
+                .AddSignInManager()
                 .AddEntityFrameworkStores<ApplicationDbContext>()
                 .AddDefaultTokenProviders();
 
