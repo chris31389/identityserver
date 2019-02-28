@@ -11,3 +11,9 @@
 Run this to update the database to the current migration
 
 `dotnet ef database update`
+
+## Running the solution
+
+Run using ISS Express in Visual Studio.
+
+Navigate to: https://localhost:44333/Identity/Account/Login
